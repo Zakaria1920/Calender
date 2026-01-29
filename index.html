@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Calender" />
+    <title>Calender</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="calendar-container">
+      <header class="calendar-header">
+        <p class="calendar-current-date"></p>
+        <div class="prev-mon-but">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+            />
+          </svg>
+          <span class="prev-mon"></span>
+        </div>
+      </header>
+      <div class="calendar-body">
+        <ul class="calendar-weekdays">
+          <li>Sun</li>
+          <li>Mon</li>
+          <li>Tue</li>
+          <li>Wed</li>
+          <li>Thu</li>
+          <li>Fri</li>
+          <li>Sat</li>
+        </ul>
+        <ul class="calendar-dates"></ul>
+      </div>
+      <div class="footer">
+        <div class="next-mon-but">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160zm352-160l-160 160c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L301.3 256 438.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0z"
+            />
+          </svg>
+          <span class="next-mon"></span>
+        </div>
+        <div class="today">Today</div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+    <!-- <script src="https://unpkg.com/cloudinary-core@latest/cloudinary-core-shrinkwrap.min.js"></script> -->
+    <!-- <script src="https://widget.cloudinary.com/v2.0/global/all.js"></script> -->
+    <!-- <script src="cloudinary.js"></script> -->
+  </body>
+</html>

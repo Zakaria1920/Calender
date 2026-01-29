@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  transition: all 150ms;
+}
+body {
+  background-color: black;
+}
+.calendar-container {
+  width: 500px;
+  margin: 50px auto;
+}
+.calendar-container header {
+  background-image: url(snow-header.jpeg);
+  border-radius: 10px 10px 0 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+header .calendar-current-date {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 0;
+  text-shadow: 0 0 10px black;
+}
+.next-mon-but,
+.prev-mon-but {
+  cursor: pointer;
+  text-shadow: 0 0 10px black;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  gap: 5px;
+  svg {
+    width: 20px;
+  }
+}
+.next-mon-but:hover,
+.prev-mon-but:hover {
+  background-color: #eee;
+}
+.prev-mon::selection,
+.next-mon::selection {
+  background-color: inherit;
+}
+.calendar-body {
+  border-style: solid;
+  border-width: 0 20px;
+  border-color: #6f8fac;
+  padding: 10px 0;
+  line-height: 2;
+  height: 320px;
+}
+.calendar-body ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.calendar-body li {
+  width: calc(100% / 7);
+  color: white;
+}
+.calendar-body li::selection {
+  background-color: inherit;
+}
+.calendar-body .calendar-weekdays li {
+  cursor: default;
+  font-weight: bold;
+}
+.calendar-body .calendar-dates li {
+  margin-top: 13px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+.calendar-body .calendar-dates li:focus-visible {
+  background-color: inherit;
+}
+.calendar-dates li.inactive {
+  color: #bbb;
+}
+.calendar-dates li.active {
+  color: #fff;
+}
+.calendar-dates li::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: all 500ms;
+}
+.calendar-dates li.active::before {
+  background: #6f8fac;
+}
+.calendar-dates li:not(.active, .inactive):hover::before {
+  background: #6f8fac;
+}
+.footer {
+  background-image: url(snow-header.jpeg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  color: white;
+}
+.footer .today {
+  width: fit-content;
+  cursor: pointer;
+  text-shadow: 0 0 10px black;
+  transition: all 500ms;
+  padding: 5px;
+  border-radius: 5px;
+}
+.footer .today:hover {
+  background-color: #eee;
+}
